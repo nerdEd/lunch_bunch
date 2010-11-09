@@ -1,4 +1,3 @@
-@wip
 Feature: user creates outing
 
   In order to eat lunch with my friends
@@ -13,6 +12,9 @@ Feature: user creates outing
     Given the following restaurant:
       | name | Delicomb |
     And I am on the home page
+
+  Scenario:  no outings yet today
+    Then I should see "No outings yet today."
 
   Scenario:  create an outing
     When I follow "Delicomb"

@@ -1,8 +1,11 @@
 %h2 Today&rsquo;s Outings
 
-%ol#outings
-  - outings.each do |outing|
-    %li= outing.restaurant.name
+- if outings.any?
+  %ol#outings
+    - outings.each do |outing|
+      %li= outing.restaurant.name
+- else
+  %p No outings yet today.
 
 %h2 All Restaurants
 
