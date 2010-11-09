@@ -1,5 +1,6 @@
 source :rubygems
 
+gem 'haml-rails', '0.3.4'
 gem 'pg', '0.9.0'
 gem 'rails', '3.0.1'
 gem 'fabrication', '0.9.0'
