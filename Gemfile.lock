@@ -53,6 +53,7 @@ GEM
     cucumber-rails (0.3.2)
       cucumber (>= 0.8.0)
     culerity (0.2.12)
+    decent_exposure (1.0.0.rc1)
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -137,6 +138,7 @@ PLATFORMS
 DEPENDENCIES
   capybara (= 0.4.0)
   cucumber-rails (= 0.3.2)
+  decent_exposure (= 1.0.0.rc1)
   fabrication (= 0.9.0)
   haml-rails (= 0.3.4)
   pg (= 0.9.0)
