@@ -12,3 +12,8 @@ end
 group :development, :test do
   gem 'rspec-rails', '2.0.1'
 end
+
+group :cucumber, :test do
+  gem 'capybara', '0.4.0'
+  gem 'cucumber-rails', '0.3.2'
+end
