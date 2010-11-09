@@ -2,6 +2,7 @@ namespace :db do
   desc 'Fill the database with handy test data'
   task :populate => :environment do
     restaurants = [
+      "Urban Flats",
       "Al's Pizza",
       "Atomic Flying Fish",
       "Beach Bud's Chicken",
@@ -30,7 +31,6 @@ namespace :db do
       "Sundog",
       "TacoLu",
       "Thai Room",
-      "Urban Flats",
     ]
 
     restaurants.each do |name|

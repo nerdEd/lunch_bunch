@@ -1,3 +1,12 @@
-%ol
+%h2 Today&rsquo;s Outings
+
+%ol#outings
+  - outings.each do |outing|
+    %li= outing.restaurant.name
+
+%h2 All Restaurants
+
+%ol#restaurants
   - restaurants.each do |restaurant|
-    %li= restaurant.name
+    %li
+      = link_to restaurant.name, new_restaurant_outing_path(restaurant)

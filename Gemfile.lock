@@ -1,6 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    ZenTest (4.4.0)
     abstract (1.0.0)
     actionmailer (3.0.1)
       actionpack (= 3.0.1)
@@ -30,6 +31,9 @@ GEM
     activesupport (3.0.1)
     arel (1.0.1)
       activesupport (~> 3.0.0)
+    autotest (4.4.2)
+    autotest-rails (4.1.0)
+      ZenTest
     builder (2.1.2)
     capybara (0.4.0)
       celerity (>= 0.7.9)
@@ -134,6 +138,7 @@ GEM
       ffi (~> 0.6.3)
       json_pure
       rubyzip
+    shoulda (2.11.3)
     term-ansicolor (1.0.5)
     thor (0.14.4)
     treetop (1.4.8)
@@ -146,6 +151,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autotest (= 4.4.2)
+  autotest-rails (= 4.1.0)
   capybara (= 0.4.0)
   cucumber-rails (= 0.3.2)
   decent_exposure (= 1.0.0.rc1)
@@ -156,3 +163,4 @@ DEPENDENCIES
   rails (= 3.0.1)
   rspec-rails (= 2.0.1)
   ruby-debug
+  shoulda (= 2.11.3)

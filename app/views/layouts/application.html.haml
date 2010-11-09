@@ -6,4 +6,10 @@
     = csrf_meta_tag
   %body
     %h1 Lunch Bunch
+
+    #flash
+      - [:notice, :alert].each do |type|
+        - if flash[type]
+          %p(class=type)= flash[type]
+
     = yield
