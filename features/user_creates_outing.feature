@@ -33,3 +33,16 @@ Feature: user creates outing
 
     When I follow "cancel"
     Then I should be on the home page
+
+  Scenario:  outing already exists
+    When I follow "Delicomb"
+    Then I should see "Create Outing"
+    And I should see "Delicomb"
+
+    When I press "Create Outing"
+    Then I should see "Your outing has been created."
+    And I should see "Delicomb" within "#outings"
+
+    When I follow "Delicomb"
+    And I press "Create Outing"
+    Then I should see "That outing has already been created!"
