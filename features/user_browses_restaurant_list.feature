@@ -9,6 +9,7 @@ Feature: User browses restaurant list
       | Atomic Flying Fish |
       | Burrito Gallery    |
       | Mellow Mushroom    |
+    And I am signed in
     And I am on the home page
     Then I should see "Atomic Flying Fish"
     And I should see "Burrito Gallery"

@@ -11,6 +11,7 @@ Feature: user creates outing
   Background:
     Given the following restaurant:
       | name | Delicomb |
+    And I am signed in
     And I am on the home page
 
   Scenario:  no outings yet today
