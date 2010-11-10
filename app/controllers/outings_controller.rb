@@ -1,7 +1,8 @@
 class OutingsController < ApplicationController
 
-  expose :outing
-  expose :restaurant
+  expose(:restaurant) { Restaurant.find(params[:restaurant_id]) }
+  expose(:outings) { restaurant.outings }
+  expose(:outing)
 
   def create
     outing.user = current_user

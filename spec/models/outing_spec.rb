@@ -2,6 +2,8 @@ require 'spec_helper'
 
 describe Outing do
   it { should belong_to(:restaurant) }
+  it { should belong_to(:user) }
+
   context "validations" do
     context "when an outing already exists for a restaurant" do
       subject do
