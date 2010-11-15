@@ -1,5 +1,5 @@
 Fabricator(:user) do
-  email { "rocketeer@hashrocket.com" }
+  email { Faker::Internet.email }
   password "password"
   password_confirmation "password"
 end

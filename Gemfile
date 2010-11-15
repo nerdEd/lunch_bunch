@@ -7,6 +7,7 @@ gem 'heroku', '1.12.2'
 gem 'pg', '0.9.0'
 gem 'rails', '3.0.1'
 gem 'fabrication', '0.9.0'
+gem 'ffaker', '1.0.0'
 
 group :development do
   gem 'ruby-debug'
