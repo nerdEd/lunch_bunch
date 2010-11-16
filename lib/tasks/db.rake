@@ -36,5 +36,8 @@ namespace :db do
     restaurants.each do |name|
       Restaurant.create! :name => name
     end
+
+    User.create! :name => "Matthew Conway", :email => "himself@mattonrails.com", :password => "password"
+
   end
 end

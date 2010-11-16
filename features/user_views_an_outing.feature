@@ -11,16 +11,14 @@ Feature: User views an outing
   -- Name of the user who started the outing
 
   Background:
-    Given I am signed in
     Given the following restaurant:
       | name | Delicomb |
-    And I have the following outing at Delicomb:
-      | name | Delicomb |
-    And that outing has the following user:
-      | name | Matthew Conway |
-    When I am on the home page
+    And I am signed in
+    And I am on the home page
 
   Scenario:
-    When I follow "Delicomb" within "#outings"
-    Then I should see "Delicomb"
+    When I follow "Delicomb"
+    And I press "Create Outing"
+    And I follow "Delicomb" within "#outings"
+    Then I should see "Outing at Delicomb"
     And I should see "Matthew Conway started this outing."

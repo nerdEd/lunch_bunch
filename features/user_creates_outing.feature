@@ -35,7 +35,7 @@ Feature: user creates outing
     Then I should be on the home page
 
   Scenario:  outing already exists
-    When I follow "Delicomb"
+    When I follow "Delicomb" within "#restaurants"
     Then I should see "Create Outing"
     And I should see "Delicomb"
 
@@ -43,6 +43,6 @@ Feature: user creates outing
     Then I should see "Your outing has been created."
     And I should see "Delicomb" within "#outings"
 
-    When I follow "Delicomb"
+    When I follow "Delicomb" within "#restaurants"
     And I press "Create Outing"
     Then I should see "That outing has already been created!"
