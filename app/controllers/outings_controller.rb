@@ -16,4 +16,9 @@ class OutingsController < ApplicationController
 
   end
 
+  def join
+    outing.users << current_user
+    redirect_to restaurant_outing_path(restaurant, outing)
+  end
+
 end

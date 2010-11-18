@@ -10,7 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101116141506) do
+ActiveRecord::Schema.define(:version => 20101118223716) do
+
+  create_table "outing_users", :force => true do |t|
+    t.integer  "outing_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "outing_users", ["outing_id"], :name => "index_outing_users_on_outing_id"
+  add_index "outing_users", ["user_id"], :name => "index_outing_users_on_user_id"
 
   create_table "outings", :force => true do |t|
     t.integer  "restaurant_id"

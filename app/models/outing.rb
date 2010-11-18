@@ -3,5 +3,8 @@ class Outing < ActiveRecord::Base
   belongs_to :restaurant
   belongs_to :user
 
+  has_many :outing_users
+  has_many :users, :through => :outing_users
+
   default_scope :include => :restaurant, :order => 'restaurants.name'
 end
