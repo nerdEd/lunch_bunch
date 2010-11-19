@@ -18,6 +18,7 @@ class OutingsController < ApplicationController
 
   def join
     outing.users << current_user
+    flash[:notice] = "You have joined this outing!"
     redirect_to restaurant_outing_path(restaurant, outing)
   end
 

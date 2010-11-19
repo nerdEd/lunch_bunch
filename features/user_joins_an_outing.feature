@@ -17,7 +17,6 @@ Feature: User joins an outing
     And that restaurant has the following outing:
       | user_id | 1 |
 
-  @wip
   Scenario: user joins
     Given I am signed in
     And I am on the home page
