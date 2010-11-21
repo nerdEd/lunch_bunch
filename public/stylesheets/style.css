@@ -1,0 +1,57 @@
+body {
+  font: normal 14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  margin: 0;
+  color: #333333
+  background: #f2f2f2
+}
+a { color: #0066bb; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.clear { height: 0; clear: both; }
+
+#wrapper {
+  width: 750px;
+  margin: 10px auto 50px;
+}
+
+header #account p { float: right; }
+#content {
+  background-color: whitesmoke;
+  padding: 1em;
+  border: 1px solid #cfcfcf;
+  -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;
+}
+
+h1 {
+  font: 64px Lobster;
+  margin: 0;
+  color: #af1523;
+}
+h2, h3, h4 {
+  font-family: Palatino, Palatino Linotype, Georgia, Times, Times New Roman, serif;
+  line-height: 1.2em;
+  color: #2d3962;
+  margin-top: 0;
+}
+p{ color: #666; }
+
+#flash p {
+  padding: 10px 15px;
+  margin: 0 0 30px 0;
+  font-weight: bold;
+}
+#flash .notice {
+  background: #e6efff;
+  border: 1px solid #0066bb;
+  color: #0066bb;
+}
+#flash .alert {
+  background: #ffeceb;
+  border: 1px solid #ea4e42;
+  /*color: #af1523;*/
+  color: #ea4e42;
+}
+
+ol { list-style-type: none; padding-left: 0; }
+ol li { line-height: 1.5em; }
+ol#outings {}
+ol#restaurants { margin-bottom: 0; }

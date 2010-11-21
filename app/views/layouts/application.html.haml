@@ -1,22 +1,31 @@
 !!!
-%html
+%html(lang="en-US")
   %head
     %title Lunch Bunch
-    = stylesheet_link_tag :all
+    = stylesheet_link_tag "style", "http://fonts.googleapis.com/css?family=Lobster&subset=latin"
     = csrf_meta_tag
   %body
-    %h1 Lunch Bunch
-    %p
-      - if user_signed_in?
-        = link_to "Sign Out", destroy_user_session_path
-      - else
-        = link_to "Sign Up", new_user_registration_path
-        |
-        = link_to "Sign In", new_user_session_path
+    #wrapper
+      %header
+        %h1 Lunch Bunch
+        #account
+          %p
+            - if user_signed_in?
+              = current_user.email
+              |
+              = link_to "Sign Out", destroy_user_session_path
+            - else
+              = link_to "Sign Up", new_user_registration_path
+              |
+              = link_to "Sign In", new_user_session_path
+          .clear
+      %section#content
+        #flash
+          - [:notice, :alert].each do |type|
+            - if flash[type]
+              %p(class=type)= flash[type]
 
-    #flash
-      - [:notice, :alert].each do |type|
-        - if flash[type]
-          %p(class=type)= flash[type]
-
-    = yield
+        = yield
+      %footer
+        %p
+          Deliciousness brought to you by #{link_to "Hashrocket", "http://hashrocket.com/"}
