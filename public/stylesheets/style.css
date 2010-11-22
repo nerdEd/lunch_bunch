@@ -20,6 +20,8 @@ header #account p { float: right; }
   border: 1px solid #cfcfcf;
   -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;
 }
+#outings { width: 345px; float: right; }
+#restaurants { float: left; }
 
 h1 a {
   font: 64px Lobster;
@@ -52,7 +54,5 @@ p{ color: #666; }
   color: #ea4e42;
 }
 
-ol { list-style-type: none; padding-left: 0; }
+ol { list-style-type: none; margin: 0; padding-left: 0; }
 ol li { line-height: 1.5em; }
-ol#outings {}
-ol#restaurants { margin-bottom: 0; }
