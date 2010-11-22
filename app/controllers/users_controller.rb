@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_filter :authenticate_user!
 
   expose(:restaurant) { Restaurant.find(params[:restaurant_id]) }
   expose(:outings) { restaurant.outings }

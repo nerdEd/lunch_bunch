@@ -1,4 +1,5 @@
 class OutingsController < ApplicationController
+  before_filter :authenticate_user!, :except => [:show]
 
   expose(:restaurant) { Restaurant.find(params[:restaurant_id]) }
   expose(:outings) { restaurant.outings }
