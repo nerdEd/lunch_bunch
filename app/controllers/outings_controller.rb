@@ -23,4 +23,14 @@ class OutingsController < ApplicationController
     redirect_to restaurant_outing_path(restaurant, outing)
   end
 
+  def leave
+    outing_user = OutingUser.find(
+      :first, :conditions => {:outing_id => outing.id, :user_id => current_user.id}
+    )
+    outing_user.destroy
+
+      flash[:notice] = "You have left this outing."
+      redirect_to restaurant_outing_path(restaurant, outing)
+  end
+
 end

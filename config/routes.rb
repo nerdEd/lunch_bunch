@@ -6,6 +6,7 @@ LunchBunch::Application.routes.draw do
     resources :outings, :only => [:show, :create, :new] do
       member do
         post :join
+        post :leave
       end
     end
   end
