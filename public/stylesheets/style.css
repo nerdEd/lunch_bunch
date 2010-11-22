@@ -21,11 +21,12 @@ header #account p { float: right; }
   -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;
 }
 
-h1 {
+h1 a {
   font: 64px Lobster;
   margin: 0;
   color: #af1523;
 }
+h1 a:hover { text-decoration: none; }
 h2, h3, h4 {
   font-family: Palatino, Palatino Linotype, Georgia, Times, Times New Roman, serif;
   line-height: 1.2em;
