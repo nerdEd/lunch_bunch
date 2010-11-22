@@ -7,6 +7,7 @@ class OutingsController < ApplicationController
 
   def create
     outing.user = current_user
+    outing.users << current_user
     if outing.save
       flash[:notice] = "Your outing has been created."
       respond_with outing, :location => root_path
