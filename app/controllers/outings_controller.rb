@@ -29,8 +29,15 @@ class OutingsController < ApplicationController
     )
     outing_user.destroy
 
+    if outing.users.empty?
+      outing.destroy
+      flash[:notice] = "The outing at #{outing.restaurant.name} was cancelled."
+      redirect_to root_path
+    else
       flash[:notice] = "You have left this outing."
       redirect_to restaurant_outing_path(restaurant, outing)
+    end
+
   end
 
 end
