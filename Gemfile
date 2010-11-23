@@ -11,6 +11,7 @@ gem 'ffaker', '1.0.0'
 
 group :development do
   gem 'ruby-debug'
+  gem 'heroku_san', '1.0.4'
 end
 
 group :development, :test do

@@ -1,0 +1,3 @@
+apps:
+  production: lunch-bunch
+  staging: lunch-bunch-staging
