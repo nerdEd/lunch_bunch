@@ -12,7 +12,7 @@ class OutingsController < ApplicationController
       flash[:notice] = "Your outing has been created."
       respond_with outing, :location => root_path
     else
-      flash[:alert] = "That outing has already been created!"
+      flash[:alert] = outing.errors.full_messages
       redirect_to root_path
     end
 

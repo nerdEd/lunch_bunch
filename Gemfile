@@ -22,6 +22,7 @@ end
 
 group :test do
   gem 'shoulda', '2.11.3'
+  gem 'timecop', '0.3.5'
 end
 
 group :cucumber, :test do
