@@ -1,0 +1,9 @@
+%h2 Create Restaurant
+
+= form_for restaurant do |f|
+  = f.label :name, "Name"
+  = f.text_field :name
+
+  %br/
+  = f.submit 'Create Restaurant'
+  = link_to 'cancel', root_path
