@@ -3,6 +3,12 @@ Lunch Bunch
 
 * requires RVM
 
+Staging: <http://lunch-bunch-staging.heroku.com/>
+
+Production: <http://lunch-bunch.heroku.com/>
+
+Pivotal Tracker: <https://www.pivotaltracker.com/projects/140053>
+
 Setup
 -----
 
