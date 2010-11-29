@@ -1,0 +1,130 @@
+@import "mixins"
+
+body
+  font: normal 14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif
+  margin: 0
+  color: #333333
+  background: #f2f2f2
+
+a
+  color: #0066bb
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+
+.clear
+  height: 0
+  clear: both
+
+form
+  dl
+    dt
+      padding: 0 0 5px 0
+      font-weight: bold
+    dd
+      padding: 0 0 15px 0
+      small
+        display: block
+      input[type="text"], input[type="password"]
+        +input
+        margin: 0 0 5px 0
+      select
+        margin: 0 0 5px 0
+      textarea
+        +input
+        height: 86px
+        margin: 0 0 5px 0
+      li
+        padding: 0 0 5px 0
+  fieldset.actions
+    input[type="submit"]
+      +button(#0066cc)
+
+header
+  width: 750px
+  margin: 10px auto 0 auto
+  p#account
+    float: right
+
+#content
+  clear: both
+  width: 750px
+  margin: 0 auto
+  background-color: whitesmoke
+  padding: 1em
+  border: 1px solid #cfcfcf
+  -webkit-border-radius: 10px
+  -moz-border-radius: 10px
+  border-radius: 10px
+
+#outings
+  width: 345px
+  float: right
+
+#restaurants
+  float: left
+
+h1 a
+  font: 64px Lobster
+  color: #af1523
+  &:hover
+    text-decoration: none
+
+h2, h3, h4
+  font-family: Palatino, Palatino Linotype, Georgia, Times, Times New Roman, serif
+  line-height: 1.2em
+  color: #2d3962
+  padding: 0 0 15px 0
+
+p
+  color: #666
+
+#flash
+  p
+    padding: 10px 15px
+    margin: 0 0 30px 0
+    font-weight: bold
+  .notice
+    background: #e6efff
+    border: 1px solid #0066bb
+    color: #0066bb
+  .alert
+    background: #ffeceb
+    border: 1px solid #ea4e42
+    color: #ea4e42
+
+ol
+  list-style-type: none
+  margin: 1em 0 0
+  padding-left: 0
+  li
+    line-height: 1.5em
+
+.button
+  background: url(../images/alert-overlay.png) repeat-x
+  display: block
+  padding: 5px 10px 6px
+  color: #fff
+  font-weight: bold
+  line-height: 1
+  -moz-border-radius: 5px
+  -webkit-border-radius: 5px
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5)
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5)
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25)
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25)
+  &:hover
+    text-decoration: none
+  &.green
+    background-color: green
+    &:hover
+      background-color: #005e00
+  &.red
+    background-color: #af1523
+    &:hover
+      background-color: #91111d
+
+footer
+  width: 750px
+  padding: 15px 10px
+  margin: 0 auto

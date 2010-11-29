@@ -1,0 +1,153 @@
+@import url("/stylesheets/whitespace-reset.css");
+body {
+  font: normal 14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  margin: 0;
+  color: #333333;
+  background: #f2f2f2; }
+
+a {
+  color: #0066bb;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+.clear {
+  height: 0;
+  clear: both; }
+
+form dl dt {
+  padding: 0 0 5px 0;
+  font-weight: bold; }
+form dl dd {
+  padding: 0 0 15px 0; }
+  form dl dd small {
+    display: block; }
+  form dl dd input[type="text"], form dl dd input[type="password"] {
+    width: 238px;
+    height: 26px;
+    padding: 2px 5px;
+    font: normal 13px Arial, Helvetica, sans-serif;
+    color: #333333;
+    border: 1px solid #cccccc;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin: 0 0 5px 0; }
+  form dl dd select {
+    margin: 0 0 5px 0; }
+  form dl dd textarea {
+    width: 238px;
+    height: 26px;
+    padding: 2px 5px;
+    font: normal 13px Arial, Helvetica, sans-serif;
+    color: #333333;
+    border: 1px solid #cccccc;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    height: 86px;
+    margin: 0 0 5px 0; }
+  form dl dd li {
+    padding: 0 0 5px 0; }
+form fieldset.actions input[type="submit"] {
+  -webkit-font-smoothing: antialiased;
+  overflow: visible;
+  padding: 5px 12px;
+  font: bold 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  border: 1px solid #0051b7;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  background-color: #0066cc;
+  background-image: -moz-linear-gradient(100% 100% 90deg, #0051b7, #0066cc);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0066cc), to(#0051b7)); }
+  form fieldset.actions input[type="submit"]:active {
+    position: relative;
+    top: 1px; }
+
+header {
+  width: 750px;
+  margin: 10px auto 0 auto; }
+  header p#account {
+    float: right; }
+
+#content {
+  clear: both;
+  width: 750px;
+  margin: 0 auto;
+  background-color: whitesmoke;
+  padding: 1em;
+  border: 1px solid #cfcfcf;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px; }
+
+#outings {
+  width: 345px;
+  float: right; }
+
+#restaurants {
+  float: left; }
+
+h1 a {
+  font: 64px Lobster;
+  color: #af1523; }
+  h1 a:hover {
+    text-decoration: none; }
+
+h2, h3, h4 {
+  font-family: Palatino, Palatino Linotype, Georgia, Times, Times New Roman, serif;
+  line-height: 1.2em;
+  color: #2d3962;
+  padding: 0 0 15px 0; }
+
+p {
+  color: #666666; }
+
+#flash p {
+  padding: 10px 15px;
+  margin: 0 0 30px 0;
+  font-weight: bold; }
+#flash .notice {
+  background: #e6efff;
+  border: 1px solid #0066bb;
+  color: #0066bb; }
+#flash .alert {
+  background: #ffeceb;
+  border: 1px solid #ea4e42;
+  color: #ea4e42; }
+
+ol {
+  list-style-type: none;
+  margin: 1em 0 0;
+  padding-left: 0; }
+  ol li {
+    line-height: 1.5em; }
+
+.button {
+  background: url(../images/alert-overlay.png) repeat-x;
+  display: block;
+  padding: 5px 10px 6px;
+  color: white;
+  font-weight: bold;
+  line-height: 1;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25); }
+  .button:hover {
+    text-decoration: none; }
+  .button.green {
+    background-color: green; }
+    .button.green:hover {
+      background-color: #005e00; }
+  .button.red {
+    background-color: #af1523; }
+    .button.red:hover {
+      background-color: #91111d; }
+
+footer {
+  width: 750px;
+  padding: 15px 10px;
+  margin: 0 auto; }
