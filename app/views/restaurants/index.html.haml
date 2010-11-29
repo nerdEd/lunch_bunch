@@ -11,7 +11,7 @@
 
 #restaurants
   %h2 All Restaurants
-  %p= link_to "+ Add a Restaurant", new_restaurant_path, :class => "green button"
+  %p= link_to "Add a Restaurant", new_restaurant_path, :class => "green button"
 
   %ol#restaurants
     - restaurants.each do |restaurant|

@@ -1,8 +1,8 @@
 %h2 Create Outing
 
-%p
-  You'd like to go to #{restaurant.name}.
+%p You'd like to go to #{restaurant.name}.
 
 = form_for [restaurant, outing] do |f|
-  = f.submit 'Create Outing'
-  = link_to 'cancel', root_path
+  %fieldset.actions
+    = f.submit 'Create Outing'
+    = link_to 'cancel', root_path

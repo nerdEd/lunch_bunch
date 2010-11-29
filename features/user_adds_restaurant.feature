@@ -9,7 +9,7 @@ Feature: User adds a restaurant
     And I am on the home page
 
   Scenario: new restaurant
-    When I follow "+ Add a Restaurant"
+    When I follow "Add a Restaurant"
     Then I should see "Create Restaurant"
 
     When I fill in "Name" with "Burrito Gallery"
@@ -20,7 +20,7 @@ Feature: User adds a restaurant
   Scenario: restaurant already exists
     Given the following restaurant:
       | name | Burrito Gallery |
-    When I follow "+ Add a Restaurant"
+    When I follow "Add a Restaurant"
     And I fill in "Name" with "Burrito Gallery"
     And I press "Create Restaurant"
     Then I should see "That restaurant already exists."

@@ -1,0 +1,55 @@
+@import url("/stylesheets/whitespace-reset.css")
+
+= border-radius($radius)
+  -moz-border-radius: $radius
+  border-radius: $radius
+= border-top-right-radius($radius)
+  -moz-border-radius-topright: $radius
+  border-top-right-radius: $radius
+= border-top-left-radius($radius)
+  -moz-border-radius-topleft: $radius
+  border-top-left-radius: $radius
+= border-bottom-right-radius($radius)
+  -moz-border-radius-bottomright: $radius
+  border-bottom-right-radius: $radius
+= border-bottom-left-radius($radius)
+  -moz-border-radius-bottomleft: $radius
+  border-bottom-left-radius: $radius
+= box-shadow($arguments)
+  -webkit-box-shadow: $arguments
+  -moz-box-shadow: $arguments
+  box-shadow: $arguments
+= border-image($url, $widths, $scale)
+  -webkit-border-image: url($url) $widths $scale
+  -moz-border-image: url($url) $widths $scale
+  border-image: url($url) $widths $scale
+= opacity($val)
+  opacity: $val
+  filter: alpha(opacity=$val*100)
+= gradient-bg($color1, $color2)
+  background-color: $color1
+  background-image: -moz-linear-gradient(100% 100% 90deg, $color2, $color1)
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($color1), to($color2))
+
+= input
+  width: 238px
+  height: 26px
+  padding: 2px 5px
+  font: normal 13px Arial, Helvetica, sans-serif
+  color: #333333
+  border: 1px solid #cccccc
+  +border-radius(3px)
+
+= button($color: #666666)
+  -webkit-font-smoothing: antialiased
+  overflow: visible
+  padding: 5px 12px
+  font: bold 14px "Helvetica Neue", Helvetica, Arial, sans-serif
+  color: #ffffff
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .4)
+  border: 1px solid $color - #151515
+  +border-radius(25px)
+  +gradient-bg($color, $color - #151515)
+  &:active
+    position: relative
+    top: 1px
