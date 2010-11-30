@@ -1,4 +1,4 @@
-%h2 Outing at #{outing.restaurant.name}
+%h2 Outing at #{outing.restaurant.name}, #{outing.event_time}
 
 %p #{outing.user.name} started this outing.
 
@@ -11,10 +11,12 @@
 
 - if outing.users.include? current_user
   = form_for [:leave, restaurant, outing], :html => { :method => :post } do |f|
-    = f.submit 'Leave'
+    %fieldset.actions
+      = f.submit 'Leave'
 - else
   = form_for [:join, restaurant, outing], :html => { :method => :post } do |f|
-    = f.submit 'Join'
+    %fieldset.actions
+      = f.submit 'Join'
 
 %br/
 = link_to 'Back', root_path

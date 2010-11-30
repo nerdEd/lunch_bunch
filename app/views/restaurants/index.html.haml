@@ -5,7 +5,7 @@
     %ol#outings
       - outings.each do |outing|
         %li
-          = link_to outing.restaurant.name, restaurant_outing_path(outing.restaurant, outing)
+          #{link_to outing.restaurant.name, restaurant_outing_path(outing.restaurant, outing)} - #{outing.event_time}
   - else
     %p No outings yet today.
 

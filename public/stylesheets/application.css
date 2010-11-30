@@ -131,6 +131,11 @@ ol {
 ul#devise_links {
   margin: 1em 0 0 0; }
 
+ul#outing_users {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin: 1em 0; }
+
 .button {
   -webkit-font-smoothing: antialiased;
   overflow: visible;

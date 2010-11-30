@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101118223716) do
+ActiveRecord::Schema.define(:version => 20101130211803) do
 
   create_table "outing_users", :force => true do |t|
     t.integer  "outing_id"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20101118223716) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.string   "event_time"
   end
 
   add_index "outings", ["user_id"], :name => "index_outings_on_user_id"

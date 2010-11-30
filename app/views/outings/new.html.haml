@@ -3,6 +3,13 @@
 %p You'd like to go to #{restaurant.name}.
 
 = form_for [restaurant, outing] do |f|
+  %fieldset
+    %dl
+      %dt
+        = f.label :event_time, "What time?"
+      %dd
+        = f.text_field :event_time
+        %small HH:MM AM/PM
   %fieldset.actions
     = f.submit 'Create Outing'
     = link_to 'cancel', root_path
