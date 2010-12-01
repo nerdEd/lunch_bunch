@@ -6,6 +6,10 @@
   %fieldset
     %dl
       %dt
+        = f.label :event_date, "Which day?"
+      %dd
+        = date_select :outing, :event_date, :discard_year => true, :start_year => Time.now.year
+      %dt
         = f.label :event_time, "What time?"
       %dd
         = f.text_field :event_time

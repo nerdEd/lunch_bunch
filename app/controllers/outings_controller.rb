@@ -9,7 +9,11 @@ class OutingsController < ApplicationController
     outing.user = current_user
     outing.users << current_user
     if outing.save
-      flash[:notice] = "Your outing has been created."
+      if outing.event_date > Date.today
+        flash[:notice] = "Your outing is scheduled for #{outing.event_date.strftime("%B %d")}"
+      else
+        flash[:notice] = "Your outing has been created."
+      end
       respond_with outing, :location => root_path
     else
       flash[:alert] = outing.errors.full_messages
