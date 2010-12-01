@@ -48,4 +48,4 @@ Feature: user creates outing
     When I follow "Delicomb" within "#restaurants"
     And I fill in "What time?" with "12:00 PM"
     And I press "Create Outing"
-    Then I should see "That outing has already been created!"
+    Then I should see "Looks like there's already a group there today"

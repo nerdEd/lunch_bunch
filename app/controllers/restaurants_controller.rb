@@ -3,7 +3,7 @@ class RestaurantsController < ApplicationController
 
   expose(:restaurants) { Restaurant.all }
   expose(:restaurant)
-  expose(:outings) { Outing.where(["created_at >= ?", Date.today]) }
+  expose(:outings) { Outing.today }
 
    def new
    end
