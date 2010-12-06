@@ -9,7 +9,7 @@ describe Outing do
   context "validations" do
 
     context "when a previous restaurant outing started in the past" do
-      let!(:outing_1) { Fabricate(:outing, :created_at => Time.now.yesterday, :restaurant => restaurant) }
+      let!(:outing_1) { Fabricate(:outing, :event_date => Date.yesterday, :restaurant => restaurant) }
       let(:outing_2) { Fabricate(:outing, :restaurant => restaurant) }
 
       specify { outing_2.should have(0).errors }
@@ -25,7 +25,7 @@ describe Outing do
   end
 
   describe ".today" do
-    let!(:outing_1) { Fabricate(:outing, :created_at => Time.now.yesterday, :restaurant => restaurant) }
+    let!(:outing_1) { Fabricate(:outing, :event_date => Date.yesterday, :restaurant => restaurant) }
     let(:outing_2) { Fabricate(:outing, :restaurant => restaurant) }
     specify { Outing.today.should == [outing_2] }
   end

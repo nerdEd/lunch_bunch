@@ -4,6 +4,7 @@ class RestaurantsController < ApplicationController
   expose(:restaurants) { Restaurant.all }
   expose(:restaurant)
   expose(:outings) { Outing.today }
+  expose(:scheduled_outings) { Outing.scheduled }
 
    def new
    end

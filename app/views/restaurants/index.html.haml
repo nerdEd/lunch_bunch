@@ -1,15 +1,26 @@
-#outings
-  %h2 Today&rsquo;s Outings
+#right
+  #outings
+    %h2 Today&rsquo;s Outings
 
-  - if outings.any?
-    %ol#outings
-      - outings.each do |outing|
-        %li
-          #{link_to outing.restaurant.name, restaurant_outing_path(outing.restaurant, outing)} - #{outing.event_time}
-  - else
-    %p No outings yet today.
+    - if outings.any?
+      %ol#outings
+        - outings.each do |outing|
+          %li
+            = outing_item(outing)
+    - else
+      %p No outings yet today.
+  #scheduled
+    %h2 Scheduled Outings
 
-#restaurants
+    - if scheduled_outings.any?
+      %ol#scheduled_outings
+        - scheduled_outings.each do |outing|
+          %li
+            = scheduled_outing_item(outing)
+    - else
+      %p No outings have been scheduled.
+
+#left
   %h2 All Restaurants
   %p= link_to "Add a Restaurant", new_restaurant_path, :class => "green button"
 

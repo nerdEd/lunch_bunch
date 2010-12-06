@@ -15,11 +15,15 @@ Feature: User schedules an outing in the future
       | name | TacoLu |
     And I am signed in
     And I am on the home page
+
+  Scenario: no scheduled outings
+    Then I should see "No outings have been scheduled."
+
+  Scenario: create a scheduled outing
     When I follow "TacoLu"
     Then I should see "Create Outing"
     And I should see "TacoLu"
 
-  Scenario:
     When I select "December" from "outing_event_date_2i"
     And I select "25" from "outing_event_date_3i"
     And I fill in "What time?" with "12:00 PM"

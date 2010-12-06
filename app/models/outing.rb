@@ -5,11 +5,12 @@ class Outing < ActiveRecord::Base
   has_many :outing_users
   has_many :users, :through => :outing_users
 
-  validate_on_create :unique_today
+  validate :unique_today, :on => :create
   validates_presence_of :restaurant_id
 
-  default_scope :include => :restaurant, :order => 'restaurants.name'
-  scope :today, lambda { where(["DATE(created_at) = ?", Date.today]) }
+  default_scope :include => :restaurant, :order => ('event_date, restaurants.name')
+  scope :today, lambda { where(["DATE(event_date) = ?", Date.today]) }
+  scope :scheduled, lambda { where(["DATE(event_date) > ?", Date.today]) }
   scope :for_restaurant, lambda { |restaurant| where(:restaurant_id => restaurant.id) }
 
   def unique_today

@@ -82,11 +82,13 @@ header {
   -moz-border-radius: 10px;
   border-radius: 10px; }
 
-#outings {
+#right {
   width: 345px;
   float: right; }
+  #right #outings {
+    min-height: 150px; }
 
-#restaurants {
+#left {
   float: left; }
 
 h1 a {
