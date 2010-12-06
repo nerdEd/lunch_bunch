@@ -8,7 +8,7 @@ class Outing < ActiveRecord::Base
   validate :unique_today, :on => :create
   validates_presence_of :restaurant_id
 
-  default_scope :include => :restaurant, :order => ('event_date, restaurants.name')
+  default_scope :include => :restaurant, :order => ('DATE(event_date), event_time, restaurants.name')
   scope :today, lambda { where(["DATE(event_date) = ?", Date.today]) }
   scope :scheduled, lambda { where(["DATE(event_date) > ?", Date.today]) }
   scope :for_restaurant, lambda { |restaurant| where(:restaurant_id => restaurant.id) }
