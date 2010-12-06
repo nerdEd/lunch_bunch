@@ -14,7 +14,7 @@ class Outing < ActiveRecord::Base
   scope :for_restaurant, lambda { |restaurant| where(:restaurant_id => restaurant.id) }
 
   def unique_today
-    if Outing.today.for_restaurant(restaurant).present?
+    if Outing.where(:event_date => event_date).for_restaurant(restaurant).present?
       errors.add(:base, "Looks like there's already a group there today")
     end
   end
