@@ -10,4 +10,14 @@ module RestaurantsHelper
     #{outing.event_date.to_s(:pretty)}, #{outing.event_time}".html_safe
   end
 
+  def map(restaurant)
+    head = "http://maps.google.com/maps/api/staticmap?markers="
+    address = restaurant.address
+    format = "jpg"
+    tail = "&format=#{format}&size=350x250&sensor=false"
+    uri = head + URI.escape(address) + tail
+
+    image_tag uri, :alt => restaurant.name
+  end
+
 end

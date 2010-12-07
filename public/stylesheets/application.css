@@ -72,8 +72,10 @@ header {
     margin-bottom: 15px; }
 
 #content {
+  position: relative;
   clear: both;
   width: 750px;
+  min-height: 250px;
   margin: 0 auto;
   background-color: whitesmoke;
   padding: 1em;
@@ -81,6 +83,10 @@ header {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px; }
+  #content img[src^="http://maps.google.com/maps/api/"] {
+    position: absolute;
+    top: 1em;
+    right: 1em; }
 
 #right {
   width: 345px;
