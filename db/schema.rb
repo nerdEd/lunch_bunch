@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101201221753) do
+ActiveRecord::Schema.define(:version => 20101207161622) do
 
   create_table "outing_users", :force => true do |t|
     t.integer  "outing_id"
@@ -35,6 +35,9 @@ ActiveRecord::Schema.define(:version => 20101201221753) do
 
   create_table "restaurants", :force => true do |t|
     t.string "name"
+    t.string "street"
+    t.string "city"
+    t.string "state"
   end
 
   create_table "users", :force => true do |t|

@@ -13,14 +13,19 @@ Feature: User adds a restaurant
     Then I should see "Create Restaurant"
 
     When I fill in "Name" with "Burrito Gallery"
+    And I fill in "Street Address" with "21 East Adams Street"
     And I press "Create Restaurant"
     Then I should see "Burrito Gallery was added to the list"
     And I should see "Burrito Gallery" within "#restaurants"
 
   Scenario: restaurant already exists
     Given the following restaurant:
-      | name | Burrito Gallery |
+      | name   | Burrito Gallery      |
+      | street | 21 East Adams Street |
+      | city   | Jacksonville         |
+      | state  | FL                   |
     When I follow "Add a Restaurant"
     And I fill in "Name" with "Burrito Gallery"
+    And I fill in "Street Address" with "21 East Adams Street"
     And I press "Create Restaurant"
     Then I should see "That restaurant already exists."

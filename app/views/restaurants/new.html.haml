@@ -7,6 +7,18 @@
         = f.label :name, "Name"
       %dd
         = f.text_field :name
+      %dt
+        = f.label :street, "Street Address"
+      %dd
+        = f.text_field :street
+      %dt
+        = f.label :city, "City"
+      %dd
+        = f.text_field :city, :value => "Jacksonville Beach"
+      %dt
+        = f.label :state, "State"
+      %dd
+        = f.text_field :state, :value => "FL"
   %fieldset.actions
     = f.submit 'Create Restaurant'
     = link_to 'cancel', root_path
