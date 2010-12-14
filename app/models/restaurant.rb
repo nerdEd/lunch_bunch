@@ -1,11 +1,9 @@
-require 'uri'
-
 class Restaurant < ActiveRecord::Base
   validates_uniqueness_of :name
   validates_presence_of :street
   validates_presence_of :city
   validates_presence_of :state
-  has_many :outings
+  has_many :outings, :dependent => :destroy
 
   default_scope :order => 'name'
 
