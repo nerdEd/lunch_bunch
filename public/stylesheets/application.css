@@ -95,6 +95,8 @@ header {
     min-height: 150px; }
   #right li {
     margin-bottom: 0.5em; }
+    #right li img {
+      margin-right: 2px; }
   #right span.outing {
     display: block;
     margin-bottom: 2px; }

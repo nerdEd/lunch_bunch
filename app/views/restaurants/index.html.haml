@@ -8,7 +8,7 @@
           %li
             %span.outing= outing_item(outing)
             - outing.users.each do |user|
-              = image_tag user.gravatar_url
+              = image_tag user.gravatar_url, :alt => user.name, :title => user.name
     - else
       %p No outings yet today.
   #scheduled
