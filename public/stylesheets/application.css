@@ -93,6 +93,11 @@ header {
   float: right; }
   #right #outings {
     min-height: 150px; }
+  #right li {
+    margin-bottom: 0.5em; }
+  #right span.outing {
+    display: block;
+    margin-bottom: 2px; }
 
 #left {
   float: left; }

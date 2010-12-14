@@ -6,7 +6,9 @@
       %ol#outings
         - outings.each do |outing|
           %li
-            = outing_item(outing)
+            %span.outing= outing_item(outing)
+            - outing.users.each do |user|
+              = image_tag user.gravatar_url
     - else
       %p No outings yet today.
   #scheduled
@@ -16,7 +18,9 @@
       %ol#scheduled_outings
         - scheduled_outings.each do |outing|
           %li
-            = scheduled_outing_item(outing)
+            %span.outing= scheduled_outing_item(outing)
+            - outing.users.each do |user|
+              = image_tag user.gravatar_url
     - else
       %p No outings have been scheduled.
 
