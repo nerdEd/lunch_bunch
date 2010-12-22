@@ -1,13 +1,10 @@
 class RestaurantsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:index]
+  before_filter :authenticate_user!, :only => [:create]
 
   expose(:restaurants) { Restaurant.all }
   expose(:restaurant)
   expose(:outings) { Outing.today }
   expose(:scheduled_outings) { Outing.scheduled }
-
-   def new
-   end
 
    def create
      if restaurant.save

@@ -6,7 +6,6 @@ class UsersController < ApplicationController
   expose(:outing) { outings.find(params[:outing_id]) }
 
   def create
-
     Outing.last.users << current_user
   end
 
