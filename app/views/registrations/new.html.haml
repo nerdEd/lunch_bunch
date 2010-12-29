@@ -11,14 +11,15 @@
         = f.label :email
       %dd
         = f.text_field :email
-      %dt
-        = f.label :password
-      %dd
-        = f.password_field :password
-      %dt
-        = f.label :password_confirmation
-      %dd
-        = f.password_field :password_confirmation
+      - if @user.password_required?
+        %dt
+          = f.label :password
+        %dd
+          = f.password_field :password
+        %dt
+          = f.label :password_confirmation
+        %dd
+          = f.password_field :password_confirmation
   %fieldset.actions
     %p= f.submit "Sign up"
 

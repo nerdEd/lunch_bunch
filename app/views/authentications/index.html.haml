@@ -1,0 +1,12 @@
+- if authentications
+  %p
+    %strong You can sign in to this account using:
+  .authentications
+    - authentications.each do |auth|
+      .authentication
+        = image_tag "twitter.png"
+        .provider
+          = auth.provider.titleize
+        .uid
+          = auth.uid
+        = link_to "X", auth, :confirm => 'Are you sure you want to remove this authentication option?', :method => :delete, :class => 'remove'
