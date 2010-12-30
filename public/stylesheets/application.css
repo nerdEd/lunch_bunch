@@ -96,6 +96,7 @@ header {
   #right li {
     margin-bottom: 0.5em; }
     #right li img {
+      width: 48px;
       margin-right: 2px; }
   #right span.outing {
     display: block;

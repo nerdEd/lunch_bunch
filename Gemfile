@@ -1,10 +1,11 @@
 source :rubygems
 
 gem 'decent_exposure', '1.0.0.rc1'
-gem 'devise', '1.1.3'
+gem 'devise', :git => 'git://github.com/plataformatec/devise.git'
 gem 'gravtastic', '3.1.0'
 gem 'haml-rails', '0.3.4'
 gem 'heroku', '1.12.2'
+gem 'oa-oauth', :require => 'omniauth/oauth'
 gem 'pg', '0.9.0'
 gem 'rails', '3.0.1'
 gem 'fabrication', '0.9.0'

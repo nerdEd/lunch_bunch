@@ -20,7 +20,7 @@ Devise.setup do |config|
   # authenticating an user, both parameters are required. Remember that those
   # parameters are used only when authenticating and not when retrieving from
   # session. If you need permissions, you should implement that in a before filter.
-  # config.authentication_keys = [ :email ]
+  config.authentication_keys = [ :login ]
 
   # Tell if authentication through request.params is enabled. True by default.
   # config.params_authenticatable = true
@@ -43,7 +43,7 @@ Devise.setup do |config|
   # from others authentication tools as :clearance_sha1, :authlogic_sha512 (then
   # you should set stretches above to 20 for default behavior) and :restful_authentication_sha1
   # (then you should set stretches to 10, and copy REST_AUTH_SITE_KEY to pepper)
-  config.encryptor = :bcrypt
+  # config.encryptor = :bcrypt
 
   # Setup a pepper to generate the encrypted password.
   config.pepper = "2a44cf5aae688a28edf37df029d941320f9add44f4ae2548c0bca7a6b7f122e2ad9116516d5eb40efc732177972025f3174f25ef9cdd4f6ddca2d2c5b600d25b"
@@ -139,4 +139,5 @@ Devise.setup do |config|
   #   end
   #   manager.default_strategies(:scope => :user).unshift :twitter_oauth
   # end
+  config.omniauth :twitter, "3u7X0F22HJwHJxRmQvpCYQ", "Is4iAneH1P7DCixUw1DFDfPrp51IW0dk9zbaA0"
 end
