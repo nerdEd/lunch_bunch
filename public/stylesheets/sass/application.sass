@@ -46,6 +46,16 @@ header
   p#account
     float: right
     margin-bottom: 15px
+    a.twitter
+      display: inline-block
+      position: relative
+      top: -5px
+      left: 5px
+      width: 151px
+      height: 24px
+      overflow: hidden
+      text-indent: -9000px
+      background: transparent url('/images/twitter.png') no-repeat left center
 
 #content
   position: relative
@@ -131,6 +141,8 @@ ul#outing_users
 
 .button
   +button(green)
+  &.red
+    +button(#af1523)
 
 footer
   width: 750px

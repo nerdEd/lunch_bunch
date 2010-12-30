@@ -1,7 +1,11 @@
 module ApplicationHelper
 
   def display_username_or_email(user)
-    "Welcome, #{user.username || user.email}!"
+    if user.username
+      "@#{user.username}"
+    else
+      user.email
+    end
   end
 
   def avatar_for(user)

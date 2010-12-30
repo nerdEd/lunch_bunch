@@ -7,7 +7,7 @@ describe ApplicationHelper do
       let(:user) { Fabricate(:user_with_username) }
 
       it 'should display the username' do
-        helper.display_username_or_email(user).should == "Welcome, #{user.username}!"
+        helper.display_username_or_email(user).should == "@#{user.username}"
       end
 
     end
@@ -16,7 +16,7 @@ describe ApplicationHelper do
       let(:user) { Fabricate(:user) }
 
       it 'should display the email address' do
-        helper.display_username_or_email(user).should == "Welcome, #{user.email}!"
+        helper.display_username_or_email(user).should == user.email
       end
     end
   end

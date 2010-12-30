@@ -1,5 +1,8 @@
 - if user_signed_in?
-  = display_username_or_email(current_user)
+  %strong
+    = display_username_or_email(current_user)
+  |
+  = link_to "Settings", edit_user_registration_path
   |
   = link_to "Sign Out", destroy_user_session_path
 - else
@@ -7,4 +10,4 @@
   |
   = link_to "Sign In", new_user_session_path
   or
-  = link_to "with Twitter", user_omniauth_authorize_path(:twitter)
+  = link_to "Sign In With Twitter", user_omniauth_authorize_path(:twitter), :class => "twitter"
