@@ -93,10 +93,8 @@ header {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px; }
-  #content img[src^="http://maps.google.com/maps/api/"] {
-    position: absolute;
-    bottom: 1em;
-    right: 1em; }
+  #content img.map {
+    float: right; }
 
 #right {
   width: 345px;

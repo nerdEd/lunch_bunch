@@ -22,7 +22,7 @@ describe RestaurantsHelper do
       end
     end
     let(:map_image) do
-      "<img alt=\"Delicomb\" src=\"http://maps.google.com/maps/api/staticmap?markers=1131%203rd%20Street%20North,%20Jacksonville%20Beach,%20FL&amp;format=jpg&amp;size=350x250&amp;sensor=false\" />"
+      "<img alt=\"Delicomb\" class=\"map\" src=\"http://maps.google.com/maps/api/staticmap?markers=1131%203rd%20Street%20North,%20Jacksonville%20Beach,%20FL&amp;format=jpg&amp;size=350x250&amp;sensor=false\" />"
     end
 
     subject { helper.map(restaurant) }

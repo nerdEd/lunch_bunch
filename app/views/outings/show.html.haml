@@ -1,5 +1,7 @@
 %h2 Outing at #{outing.restaurant.name}, #{outing.event_time}
 
+= map(outing.restaurant)
+
 %p #{outing.user.name} started this outing.
 
 - if outing.users.empty?
@@ -20,5 +22,3 @@
 
 %br/
 = link_to 'Back', root_path
-
-= map(outing.restaurant)

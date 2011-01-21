@@ -17,7 +17,7 @@ module RestaurantsHelper
     tail = "&format=#{format}&size=350x250&sensor=false"
     uri = head + URI.escape(address) + tail
 
-    image_tag uri, :alt => restaurant.name
+    image_tag uri, :alt => restaurant.name, class: "map"
   end
 
 end
