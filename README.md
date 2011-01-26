@@ -1,13 +1,15 @@
 Lunch Bunch
 ===========
 
-* requires RVM
+This fork of Lunch Bunch will be the basis of "Lunch with a Local" a project by 
+the B'more on Rails user group for RailsConf 2011. The hope is that it will 
+facilitate locals getting groups of RailsConf attendees out for lunch. 
 
-Staging: <http://lunch-bunch-staging.heroku.com/>
+If it seems like it will work, we'll probably want to expand the scope of the 
+application to include other events not just lunch.
 
-Production: <http://lunch-bunch.heroku.com/>
-
-Pivotal Tracker: <https://www.pivotaltracker.com/projects/140053>
+Want to help? Check out the pivotal project 
+[here](https://www.pivotaltracker.com/projects/216167)
 
 Setup
 -----
