@@ -17,8 +17,6 @@ group :development do
 end
 
 group :development, :test do
-  gem 'autotest', '4.4.2'
-  gem 'autotest-rails', '4.1.0'
   gem 'rspec-rails', '2.0.1'
 end
 
