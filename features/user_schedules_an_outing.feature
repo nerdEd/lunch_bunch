@@ -1,4 +1,3 @@
-@wip
 Feature: User schedules an outing in the future
 
   In order to plan lunch outings ahead of time
