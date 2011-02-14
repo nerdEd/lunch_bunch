@@ -5,7 +5,7 @@ Lunch Bunch
 
 Staging: <http://lunch-bunch-staging.heroku.com/>
 
-Production: <http://lunch-bunch.heroku.com/>
+Production: <http://lunchbunch.me/>
 
 Pivotal Tracker: <https://www.pivotaltracker.com/projects/140053>
 
