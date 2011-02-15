@@ -12,7 +12,6 @@ gem 'fabrication', '0.9.5'
 gem 'ffaker', '1.0.0'
 
 group :development do
-  gem 'ruby-debug19'
   gem 'heroku_san', '1.0.8'
 end
 
