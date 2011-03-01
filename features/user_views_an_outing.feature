@@ -16,7 +16,6 @@ Feature: User views an outing
     And I am signed in
     And I am on the home page
 
-  @wip
   Scenario:
     When I follow "Delicomb"
     And I select today for the event date
