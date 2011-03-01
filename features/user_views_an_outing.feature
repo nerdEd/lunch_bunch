@@ -16,9 +16,12 @@ Feature: User views an outing
     And I am signed in
     And I am on the home page
 
+  @wip
   Scenario:
     When I follow "Delicomb"
+    And I select today for the event date
     And I press "Create Outing"
+    And show me the page
     And I follow "Delicomb" within "#outings"
     Then I should see "Outing at Delicomb"
     And I should see "Matthew Conway started this outing."

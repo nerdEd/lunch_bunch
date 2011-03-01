@@ -22,9 +22,11 @@ Feature: user creates outing
     Then I should see "Create Outing"
     And I should see "Delicomb"
 
-    When I fill in "What time?" with "12:00 PM"
+    When I select today for the event date
+    And I fill in "What time?" with "12:00 PM"
     And I press "Create Outing"
-    Then I should see "Your outing has been created."
+    Then  show me the page
+    Then I should see "Your outing has been created"
     And I should see "Delicomb - 12:00 PM" within "#outings"
 
   Scenario:  create an outing, but cancel
@@ -40,12 +42,14 @@ Feature: user creates outing
     Then I should see "Create Outing"
     And I should see "Delicomb"
 
-    When I fill in "What time?" with "12:00 PM"
+    When I select today for the event date
+    And I fill in "What time?" with "12:00 PM"
     And I press "Create Outing"
-    Then I should see "Your outing has been created."
+    Then I should see "Your outing has been created"
     And I should see "Delicomb - 12:00 PM" within "#outings"
 
     When I follow "Delicomb" within "#restaurants"
+    And I select today for the event date
     And I fill in "What time?" with "12:00 PM"
     And I press "Create Outing"
     Then I should see "Looks like there's already a group there today"
