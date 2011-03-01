@@ -8,8 +8,9 @@ facilitate locals getting groups of RailsConf attendees out for lunch.
 If it seems like it will work, we'll probably want to expand the scope of the 
 application to include other events not just lunch.
 
-Want to help? Check out the pivotal project 
-[here](https://www.pivotaltracker.com/projects/216167)
+Production: <http://lunchbunch.me/>
+
+Pivotal Tracker: <https://www.pivotaltracker.com/projects/140053>
 
 Setup
 -----

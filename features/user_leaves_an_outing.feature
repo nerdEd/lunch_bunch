@@ -10,21 +10,14 @@ Feature: User leaves an outing
   - I am not on the list
 
   Scenario: one of multiple outing users left
-    Given I am signed in
-    And I am on the home page
-    And the following user:
-      | id   | 100            |
-      | name | Matthew Conway |
-    And the following restaurant:
-      | name | Delicomb |
-    And that restaurant has the following outing:
-      | user_id | 100 |
-    And that outing has the following users:
-      | name          |
-      | Frank Sinatra |
-    When I am on the home page
-    And I follow "Delicomb" within "#outings"
+    Given the following users:
+      | name          | email              |
+      | Wesley Willis | wesley@example.com |
+      | Jello Biafra  | jello@example.com  |
+    And "Jello Biafra" has started an outing at "Delicomb"
+    And I sign in as "wesley@example.com"
+    When I follow "Delicomb" in the "Today's Outings" section
     And I press "Join"
-    And I should see "Matthew Conway" within "#outing_users"
+    Then I should see "You have joined this outing!"
     When I press "Leave"
     Then I should see "You have left this outing."

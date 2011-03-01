@@ -17,9 +17,9 @@ describe Outing do
 
     context "when a previous restaurant outing started today" do
       let!(:outing_1) { Fabricate(:outing, :restaurant => restaurant) }
-      let(:outing_2) { Fabricate(:outing, :restaurant => restaurant) }
+      let(:outing_2) { Fabricate.build(:outing, :restaurant => restaurant) }
 
-      specify { outing_2.should have(1).error }
+      specify { outing_2.should_not be_valid }
     end
 
   end
