@@ -1,0 +1,5 @@
+%span.outing= outing_item(outing)
+%span.actions
+  = link_to 'Edit', edit_restaurant_outing_path(outing.restaurant, outing) if outing.user == current_user
+- outing.users.each do |user|
+  = image_tag avatar_for(user), alt: user.name, title: user.name

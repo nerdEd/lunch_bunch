@@ -1,11 +1,12 @@
-%h2 Create Outing
+%h2 Edit Outing
 
 %p You'd like to go to #{restaurant.name}.
 
 = form_for [restaurant, outing] do |f|
   = render :partial => 'fields', :locals => {:f => f}
   %fieldset.actions
-    = f.submit 'Create Outing'
+    = f.submit 'Update Outing'
     = link_to 'cancel', root_path
 
 = map(restaurant)
+

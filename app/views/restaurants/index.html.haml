@@ -5,10 +5,7 @@
     - if outings.any?
       %ol#outings
         - outings.each do |outing|
-          %li
-            %span.outing= outing_item(outing)
-            - outing.users.each do |user|
-              = image_tag avatar_for(user), alt: user.name, title: user.name
+          %li= render outing
     - else
       %p No outings yet today.
   #scheduled
@@ -17,10 +14,7 @@
     - if scheduled_outings.any?
       %ol#scheduled_outings
         - scheduled_outings.each do |outing|
-          %li
-            %span.outing= scheduled_outing_item(outing)
-            - outing.users.each do |user|
-              = image_tag avatar_for(user)
+          %li= render outing
     - else
       %p No outings have been scheduled.
 

@@ -1,5 +1,5 @@
 class OutingsController < ApplicationController
-  before_filter :authenticate_user!, :only => [:create, :join, :leave]
+  before_filter :authenticate_user!, :only => [:create, :join, :leave, :update]
 
   expose(:restaurant) { Restaurant.find(params[:restaurant_id]) }
   expose(:outings) { restaurant.outings }
@@ -20,6 +20,15 @@ class OutingsController < ApplicationController
       redirect_to root_path
     end
 
+  end
+
+  def update
+    if outing.update_attributes(params[:outing])
+      flash[:notice] = 'Outing updated'
+      redirect_to root_path
+    else
+      render :edit
+    end
   end
 
   def join
