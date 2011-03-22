@@ -25,7 +25,6 @@ Feature: user creates outing
     When I select today for the event date
     And I fill in "What time?" with "12:00 PM"
     And I press "Create Outing"
-    Then  show me the page
     Then I should see "Your outing has been created"
     And I should see "Delicomb - 12:00 PM" within "#outings"
 
