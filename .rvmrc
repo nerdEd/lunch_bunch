@@ -1,2 +1,2 @@
 rvm_create_on_use_flag=1
-rvm use 1.9.2@lunch_bunch
+rvm use 1.9.2-p136@lunch_bunch
