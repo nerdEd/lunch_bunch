@@ -1,7 +1,7 @@
 class OutingsController < ApplicationController
   before_filter :authenticate_user!, :only => [:create, :join, :leave, :update]
 
-  expose(:restaurant) { Restaurant.find(params[:restaurant_id]) }
+  expose(:restaurant) 
   expose(:outings) { restaurant.outings }
   expose(:outing)
 
